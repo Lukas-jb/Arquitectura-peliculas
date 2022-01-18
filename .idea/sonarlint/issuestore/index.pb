@@ -5,8 +5,6 @@ t
 Dsrc/main/java/co/com/sofka/domain/generic/DomainEventRepository.java,d\3\d382cc85756025ddffb9ba78808874421e9f31b7
 s
 Csrc/main/java/co/com/sofka/domain/generic/EventStoreRepository.java,5\6\56eb842ec92d5a2ef6f3c0ee0d2748724f5d04aa
-7
-pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
 s
 Csrc/main/java/co/com/sofka/domain/generic/DeserializeException.java,0\1\01eb2f189a3d499b363626624ca30f1e37756aa4
 q
