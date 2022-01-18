@@ -1,11 +1,8 @@
 package co.com.sofka.infra.entrypoint;
 
-
-import co.com.sofka.wsscore.domain.program.command.AddCourseCommand;
-import co.com.sofka.wsscore.domain.program.command.AssignScoreCommand;
-import co.com.sofka.wsscore.domain.program.command.CreateProgramCommand;
+import co.com.sofka.domain.catalogo.command.AsignarPeliculaCommand;
+import co.com.sofka.domain.catalogo.command.CrearCatalogoCommand;
 import io.vertx.mutiny.core.eventbus.EventBus;
-
 import javax.ws.rs.Consumes;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
@@ -23,26 +20,17 @@ public class CommandController {
 
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
-    @Path("/assignScore")
-    public Response executor(AssignScoreCommand command) {
+    @Path("/asignarPelicula")
+    public Response executor(AsignarPeliculaCommand command) {
         bus.publish(command.getType(), command);
         return Response.ok().build();
     }
 
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
-    @Path("/createProgram")
-    public Response executor(CreateProgramCommand command) {
+    @Path("/crearCatalogo")
+    public Response executor(CrearCatalogoCommand command) {
         bus.publish(command.getType(), command);//emitir comandos, los casos de uso
-        return Response.ok().build();
-    }
-
-
-    @POST
-    @Consumes(MediaType.APPLICATION_JSON)
-    @Path("/addCourse")
-    public Response executor(AddCourseCommand command) {
-        bus.publish(command.getType(), command);
         return Response.ok().build();
     }
 
