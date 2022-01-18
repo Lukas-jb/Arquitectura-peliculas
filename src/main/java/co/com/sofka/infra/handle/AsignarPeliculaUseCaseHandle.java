@@ -9,15 +9,15 @@ import javax.enterprise.context.ApplicationScoped;
 
 
 @ApplicationScoped
-public class AssignScoreUseCaseHandle extends UseCaseHandle {
+public class AsignarPeliculaUseCaseHandle extends UseCaseHandle {
     private final ExtraerCatalogoUsecase extraerCatalogoUsecase;
 
-    public AssignScoreUseCaseHandle(ExtraerCatalogoUsecase extraerCatalogoUsecase) {
+    public AsignarPeliculaUseCaseHandle(ExtraerCatalogoUsecase extraerCatalogoUsecase) {
         this.extraerCatalogoUsecase = extraerCatalogoUsecase;
     }
 
 
-    @ConsumeEvent(value = "sofkau.program.assignscore")
+    @ConsumeEvent(value = "sofkau.catalogo.asignarpelicula")
     void consumeBlocking(AsignarPeliculaCommand command) {
         var events = extraerCatalogoUsecase.apply(command);
         saveCatalogo(command.getCatalogoId(), events);
