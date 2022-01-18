@@ -15,9 +15,3 @@ j
 :src/main/java/co/com/sofka/domain/generic/StoredEvent.java,7\c\7cd93577e0f4b564625b3994b76ff56839c8b559
 t
 Dsrc/main/java/co/com/sofka/domain/generic/StoredEventSerializer.java,8\3\83241540ee44be0658e76cbe1ee5f09dd3e99248
-o
-?src/main/java/co/com/sofka/useCases/ExtraerCatalogoUsecase.java,2\4\2480b8f45c798128480560504413a78c4e58381c
-h
-8src/main/java/co/com/sofka/domain/catalogo/Catalogo.java,2\1\21c9638633a753c626ddc4bff091d5372e4a9dca
-p
-@src/main/java/co/com/sofka/useCases/ExtraerCatalogoExepcion.java,2\a\2a3de0aee593b3334810a1d59ac3039917115c80
