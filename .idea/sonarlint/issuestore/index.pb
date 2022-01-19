@@ -9,8 +9,6 @@ s
 Csrc/main/java/co/com/sofka/domain/generic/DeserializeException.java,0\1\01eb2f189a3d499b363626624ca30f1e37756aa4
 q
 Asrc/main/java/co/com/sofka/domain/generic/AbstractSerializer.java,b\8\b8277f50cd422c960f5f7de4ebb5bb28fa1e7f7a
-n
->src/main/java/co/com/sofka/domain/generic/EventSerializer.java,3\8\38fa5ccc522ad5a09e0c548c52f977eb0acd2a0b
 j
 :src/main/java/co/com/sofka/domain/generic/StoredEvent.java,7\c\7cd93577e0f4b564625b3994b76ff56839c8b559
 t

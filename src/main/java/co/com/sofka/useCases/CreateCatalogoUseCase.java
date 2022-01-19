@@ -14,7 +14,7 @@ public class CreateCatalogoUseCase implements Function<CrearCatalogoCommand, Lis
 
     @Override
     public List<DomainEvent> apply(CrearCatalogoCommand command) {
-        var catalogo = new Catalogo(command.getCatalogoTd(), command.getNombre());
+        var catalogo = new Catalogo(command.getCatalogoId(), command.getNombre());
         return catalogo.getUncommittedChanges();
     }
 }

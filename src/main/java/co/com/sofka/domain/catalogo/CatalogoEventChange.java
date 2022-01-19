@@ -14,8 +14,8 @@ public class CatalogoEventChange implements EventChange {
         });
 
         listener((PeliculaAsignada event)->{
-            var pelicula = new Pelicula(event.getId(), event.getUrl(), event.getNombre(), event.getGenero(), event.getSinopsis(), event.getFecha());
-            catalogo.peliculas.put(event.getId(), pelicula);
+            var pelicula = new Pelicula(event.getPeliculaId(), event.getUrl(), event.getNombre(), event.getGenero(), event.getSinopsis(), event.getFecha());
+            catalogo.peliculas.put(event.getPeliculaId(), pelicula);
         });
     }
 }

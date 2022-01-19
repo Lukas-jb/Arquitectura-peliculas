@@ -4,18 +4,18 @@ import co.com.sofka.domain.generic.Command;
 
 public class CrearCatalogoCommand extends Command {
 
-    private String catalogoTd;
+    private String catalogoId;
     private String nombre;
 
     public CrearCatalogoCommand() {
     }
 
-    public String getCatalogoTd() {
-        return catalogoTd;
+    public String getCatalogoId() {
+        return catalogoId;
     }
 
-    public void setCatalogoTd(String catalogoTd) {
-        this.catalogoTd = catalogoTd;
+    public void setCatalogoId(String catalogoId) {
+        this.catalogoId = catalogoId;
     }
 
     public String getNombre() {

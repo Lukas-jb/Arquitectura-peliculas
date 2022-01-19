@@ -20,6 +20,6 @@ public class CreateCatalogoUseCaseHandle extends UseCaseHandle {
     @ConsumeEvent(value = "sofkau.catalogo.crearCatalogo")
     void consumeBlocking(CrearCatalogoCommand command) {
         var events = createCatalogoUseCase.apply(command);
-        saveCatalogo(command.getCatalogoTd(), events);
+        saveCatalogo(command.getCatalogoId(), events);
     }
 }
