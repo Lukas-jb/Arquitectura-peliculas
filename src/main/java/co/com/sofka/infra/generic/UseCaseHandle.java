@@ -7,12 +7,11 @@ import co.com.sofka.domain.generic.StoredEvent;
 import co.com.sofka.infra.message.BusService;
 
 
-import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import java.util.Date;
 import java.util.List;
 
-@ApplicationScoped
+
 public abstract class UseCaseHandle {
     @Inject
     private EventStoreRepository repository;

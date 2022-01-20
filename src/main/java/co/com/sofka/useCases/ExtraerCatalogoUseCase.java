@@ -2,7 +2,6 @@ package co.com.sofka.useCases;
 
 import co.com.sofka.domain.catalogo.Catalogo;
 import co.com.sofka.domain.catalogo.command.AsignarPeliculaCommand;
-import co.com.sofka.domain.generic.DeserializeException;
 import co.com.sofka.domain.generic.DomainEvent;
 import co.com.sofka.domain.generic.EventStoreRepository;
 import org.jsoup.Jsoup;
@@ -14,15 +13,13 @@ import java.io.IOException;
 import java.util.List;
 import java.util.function.Function;
 
-import static io.netty.handler.codec.rtsp.RtspHeaders.Values.URL;
-
 @Dependent
-public class ExtraerCatalogoUsecase implements Function<AsignarPeliculaCommand, List<DomainEvent>> {
+public class ExtraerCatalogoUseCase implements Function<AsignarPeliculaCommand, List<DomainEvent>> {
 
     private final EventStoreRepository repository;
-    final String baseURL = "https://pelisplushd.net/estrenos";
+    final String baseURL = "https://pelisplus.so/estrenos";
 
-    public ExtraerCatalogoUsecase(EventStoreRepository repository) {
+    public ExtraerCatalogoUseCase(EventStoreRepository repository) {
         this.repository = repository;
     }
 
@@ -43,7 +40,7 @@ public class ExtraerCatalogoUsecase implements Function<AsignarPeliculaCommand, 
                 String fecha = movie.select(".info-content p:nth-of-type(2) span:nth-of-type(2)").text();
                 String url = movie.select(".player.player-normal ul:nth-of-type(2)  li:nth-of-type(1)").attr("data-video");
 
-                catalogo.asignarPelicula(asignarPeliculaCommand.getPeliculaId(),URL, nombre, genero, sinopsis, fecha);
+                catalogo.asignarPelicula(asignarPeliculaCommand.getPeliculaId(), url, nombre, genero, sinopsis, fecha);
 
             } catch (Exception ex) {
                 throw new ExtraerCatalogoExepcion();

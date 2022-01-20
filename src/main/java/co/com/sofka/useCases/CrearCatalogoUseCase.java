@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.function.Function;
 
 @Dependent
-public class CreateCatalogoUseCase implements Function<CrearCatalogoCommand, List<DomainEvent>> {
+public class CrearCatalogoUseCase implements Function<CrearCatalogoCommand, List<DomainEvent>> {
 
     @Override
     public List<DomainEvent> apply(CrearCatalogoCommand command) {

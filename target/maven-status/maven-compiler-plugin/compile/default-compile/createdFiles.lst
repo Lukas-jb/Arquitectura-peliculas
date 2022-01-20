@@ -1,7 +1,0 @@
-co\com\sofka\infra\entrypoint\QueryController.class
-co\com\sofka\infra\handle\CreateCatalogoUseCaseHandle.class
-co\com\sofka\infra\materialize\CatalogoHandle.class
-co\com\sofka\useCases\CreateCatalogoUseCase.class
-co\com\sofka\infra\repository\MongoEventStoreRepository.class
-co\com\sofka\infra\handle\AsignarPeliculaUseCaseHandle.class
-co\com\sofka\infra\entrypoint\CommandController.class

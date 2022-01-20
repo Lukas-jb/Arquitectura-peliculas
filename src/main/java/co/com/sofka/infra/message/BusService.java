@@ -33,7 +33,7 @@ public class BusService {
 
     public void onApplicationStart(@Observes StartupEvent event) throws IOException {
         Connection connection = rabbitMQClient.connect();
-        channel = (Channel) connection.createChannel();
+        channel = connection.createChannel();
         channel.exchangeDeclare(EXCHANGE, BuiltinExchangeType.TOPIC, true);
 
         //for event

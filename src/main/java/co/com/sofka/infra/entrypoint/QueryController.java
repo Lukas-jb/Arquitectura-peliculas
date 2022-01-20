@@ -32,4 +32,16 @@ public class QueryController {
                 .forEach(documentList::add);
         return Response.ok(documentList).build();
     }
+
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    @Path("/catalogos")
+    public Response getAll() {
+        List<Document> documentList = new ArrayList<>();
+        mongoClient.getDatabase("queries")
+                .getCollection("catalogo")
+                .find()
+                .forEach(documentList::add);
+        return Response.ok(documentList).build();
+    }
 }

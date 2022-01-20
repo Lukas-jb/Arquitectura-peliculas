@@ -26,7 +26,7 @@ public class CatalogoHandle {
     void consumeCatalogoCreado(CatalogoCreado event) {
         Map<String, Object> document = new HashMap<>();
         document.put("_id", event.getAggregateId());
-        document.put("name", event.getNombre());
+        document.put("nombre", event.getNombre());
 
         mongoClient.getDatabase("queries")
                 .getCollection("catalogo")
@@ -34,14 +34,13 @@ public class CatalogoHandle {
     }
 
     @ConsumeEvent(value = "sofka.peliculaasignada", blocking = true)
-    void consumePeliculaasignada(PeliculaAsignada event) {
+    void consumePeliculaAsignada(PeliculaAsignada event) {
         BasicDBObject document = new BasicDBObject();
-        var key = "catalogo."+event.getAggregateId();
-        document.put(key+".pelicula."+event.getNombre()+".nombre", event.getNombre());
-        document.put(key+".pelicula."+event.getNombre()+".fecha", event.getFecha());
-        document.put(key+".pelicula."+event.getNombre()+".Sinopsis", event.getSinopsis());
-        document.put(key+".pelicula."+event.getNombre()+".Genero", event.getGenero());
-        document.put(key+".pelicula."+event.getNombre()+".URL", event.getUrl());
+        document.put("pelicula."+event.getNombre()+".nombre", event.getNombre());
+        document.put("pelicula."+event.getNombre()+".fecha", event.getFecha());
+        document.put("pelicula."+event.getNombre()+".sinopsis", event.getSinopsis());
+        document.put("pelicula."+event.getNombre()+".genero", event.getGenero());
+        document.put("pelicula."+event.getNombre()+".url", event.getUrl());
 
         BasicDBObject updateObject = new BasicDBObject();
         updateObject.put("$set", document);
