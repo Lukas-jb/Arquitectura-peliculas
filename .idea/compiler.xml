@@ -8,11 +8,13 @@
         <outputRelativeToContentRoot value="true" />
         <module name="project-movies-app" />
         <module name="challenge-clean-architecture-sofka-main" />
+        <module name="Scraping-Arq-sofka" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Scraping-Arq-sofka" options="-parameters" />
       <module name="challenge-clean-architecture-sofka-main" options="-parameters" />
     </option>
   </component>
