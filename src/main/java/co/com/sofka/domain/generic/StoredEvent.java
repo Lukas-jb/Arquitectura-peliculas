@@ -1,6 +1,7 @@
 package co.com.sofka.domain.generic;
 
 import com.google.gson.Gson;
+
 import java.util.Date;
 
 public final class StoredEvent {

@@ -11,7 +11,7 @@ public class Pelicula {
     private final String fecha;
 
     public Pelicula(String id, String url, String nombre, String genero, String sinopsis, String fecha) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.url = Objects.requireNonNull(url);
         this.nombre = Objects.requireNonNull(nombre);
         this.genero = Objects.requireNonNull(genero);

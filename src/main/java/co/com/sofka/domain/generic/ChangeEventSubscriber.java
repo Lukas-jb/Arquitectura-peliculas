@@ -14,12 +14,10 @@ public class ChangeEventSubscriber {
         return changes;
     }
 
-
     public final ChangeApply appendChange(DomainEvent event) {
         changes.add(event);
         return () -> applyEvent(event);
     }
-
 
     public final void subscribe(EventChange eventChange) {
         this.observables.addAll(eventChange.behaviors);
@@ -35,8 +33,6 @@ public class ChangeEventSubscriber {
         });
     }
 
-
-
     @FunctionalInterface
     public interface ChangeApply {
         /**
@@ -44,5 +40,4 @@ public class ChangeEventSubscriber {
          */
         void apply();
     }
-
 }

@@ -22,11 +22,9 @@ public abstract class DomainEvent implements Serializable {
         return type;
     }
 
-
     public Instant getInstant() {
         return instant;
     }
-
 
     public  void setAggregateId(String aggregateId){
         this.aggregateId = aggregateId;

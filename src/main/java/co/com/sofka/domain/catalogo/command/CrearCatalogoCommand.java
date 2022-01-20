@@ -7,7 +7,7 @@ public class CrearCatalogoCommand extends Command {
     private String catalogoId;
     private String nombre;
 
-    public CrearCatalogoCommand() {
+    public CrearCatalogoCommand(){
     }
 
     public String getCatalogoId() {
@@ -26,4 +26,3 @@ public class CrearCatalogoCommand extends Command {
         this.nombre = nombre;
     }
 }
-

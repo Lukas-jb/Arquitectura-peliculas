@@ -1,6 +1,5 @@
 package co.com.sofka.domain.generic;
 
-
 import java.lang.reflect.Type;
 
 public final class CommandSerializer extends AbstractSerializer {

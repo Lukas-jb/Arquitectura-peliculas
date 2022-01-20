@@ -30,7 +30,6 @@ public class Catalogo extends AggregateRoot {
         appendChange(new PeliculaAsignada(peliculaId, url, nombre, genero, sinopsis, fecha)).apply();
     }
 
-
     public static Catalogo from(String id, List<DomainEvent> events){
         var catalogo = new Catalogo(id);
         events.forEach(catalogo::applyEvent);
